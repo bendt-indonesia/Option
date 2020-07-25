@@ -1,7 +1,7 @@
 {
   "name": "bendt/option",
   "homepage": "https://bendt.co.id",
-  "version": "5.8.x-dev",
+  "version": "5.8",
   "license": "MIT",
   "description": "Bendt Option Module",
   "type": "laravel",
