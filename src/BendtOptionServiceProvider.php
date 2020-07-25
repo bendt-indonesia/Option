@@ -11,7 +11,7 @@
  Last Update 24 Jul 2020
  */
 
-namespace Bendt\Invoice;
+namespace Bendt\Option;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Router;
