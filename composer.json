@@ -24,7 +24,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Bendt\\Option\\BendtOptionsServiceProvider"
+        "Bendt\\Option\\BendtOptionServiceProvider"
       ]
     }
   }
