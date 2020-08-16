@@ -17,9 +17,9 @@ class Option extends BaseModel {
 
 	protected $processed = ['slug'];
 
-	protected $softCascade = ['option_detail'];
+	protected $softCascade = ['option_details'];
 
-	protected $with = ['option_detail'];
+	protected $with = ['option_details'];
 
 	protected $guarded = ['slug'];
 

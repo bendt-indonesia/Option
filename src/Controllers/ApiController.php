@@ -11,8 +11,9 @@
  Please don't modify this file because it may be overwritten when re-generated.
  */
 
-namespace App\Http\Controllers;
+namespace Bendt\Option\Controllers;
 
+use App\Http\Controllers\Controller as AppController;
 use Bendt\Option\Models\ErrorLog;
 use Bendt\Option\Exceptions\MyValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
-class ApiController extends Controller
+class ApiController extends AppController
 {
     /**
      * success response method.

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace Bendt\Option\Controllers\API;
 
 use Bendt\Option\Controllers\ApiController;
 use Illuminate\Http\Request;

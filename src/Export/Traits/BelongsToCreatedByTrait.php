@@ -13,7 +13,7 @@
 
 namespace App\Traits;
 
-use Bendt\Option\User;
+use App\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
