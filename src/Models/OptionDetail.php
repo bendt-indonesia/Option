@@ -13,11 +13,11 @@ class OptionDetail extends BaseModel {
 
 	use SoftCascadeTrait, SoftDeletes, BelongsToCreatedByTrait, BelongsToUpdatedByTrait, BelongsToDeletedByTrait, ScopeActiveTrait;
 
-	protected $table = 'option_detail';
+	protected $table = 'option_details';
 
 	protected $files = [];
 
-	const FILE_PATH = "/option_detail/";
+	const FILE_PATH = "/option_details/";
 
 	public function option() {
 		return $this->belongsTo(Option::class);

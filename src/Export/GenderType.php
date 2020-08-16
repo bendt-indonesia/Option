@@ -11,12 +11,18 @@
  Please don't modify this file because it may be overwritten when re-generated.
  */
 
-namespace Bendt\Option\Enums;
+namespace App\Enums;
 
-interface IEnum
+class GenderType extends EnumClass
 {
-    public static function ToKeyValue();
-    public static function ToString($str);
-    public static function ToArrayOfKey();
-    public static function ToRules();
+    const KEY = 'gender-type';
+
+    const
+        MAN = 1,
+        WOMAN = 2,
+        OTHER = 3;
+
+    public static $STATUS_LIST = [
+
+    ];
 }

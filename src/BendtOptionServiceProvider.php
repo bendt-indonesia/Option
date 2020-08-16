@@ -8,7 +8,7 @@
  | |_) |  __/ | | | (_| | |_   _| |_| | | | (_| | (_) | | | |  __/\__ \ | (_| |
  |____/ \___|_| |_|\__,_|\__| |_____|_| |_|\__,_|\___/|_| |_|\___||___/_|\__,_|
 
- Last Update 24 Jul 2020
+ Last Update 16 Aug 2020
  */
 
 namespace Bendt\Option;
@@ -37,8 +37,24 @@ class BendtOptionServiceProvider extends ServiceProvider
             __DIR__.'/config/bendt-option.php' => config_path('bendt-option.php'),
         ], 'config');
 
-        //Load Migrations
-        $this->loadMigrationsFrom(__DIR__ . '/Database/migrations');
+        $this->publishes([
+            __DIR__.'/Export/IEnum.php' => app_path('Export/IEnum.php'),
+            __DIR__.'/Export/EnumClass.php' => app_path('Enums/EnumClass.php'),
+            __DIR__.'/Export/GenderType.php' => app_path('Enums/GenderType.php'),
+        ], 'enum');
+
+        $this->publishes([
+            __DIR__.'/Export/Traits/BelongsToCreatedByTrait.php' => app_path('Traits/BelongsToCreatedByTrait.php'),
+            __DIR__.'/Export/Traits/BelongsToDeletedByTrait.php' => app_path('Traits/BelongsToDeletedByTrait.php'),
+            __DIR__.'/Export/Traits/BelongsToUpdatedByTrait.php' => app_path('Traits/BelongsToUpdatedByTrait.php'),
+            __DIR__.'/Export/Traits/ScopeActiveTrait.php' => app_path('Traits/ScopeActiveTrait.php'),
+            __DIR__.'/Export/Traits/ScopeAscTrait.php' => app_path('Traits/ScopeAscTrait.php'),
+            __DIR__.'/Export/Traits/ScopeDescTrait.php' => app_path('Traits/ScopeDescTrait.php'),
+        ], 'enum');
+
+        if(config('bendt-option.migration', true)) {
+            $this->loadMigrationsFrom(__DIR__ . '/Database/migrations');
+        }
 
         //Load routes
         require __DIR__ . '/helper.php';

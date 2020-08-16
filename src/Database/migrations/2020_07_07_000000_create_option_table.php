@@ -27,10 +27,6 @@ class CreateOptionTable extends Migration
             $table->unsignedInteger('updated_by_id')->nullable();
             $table->unsignedInteger('deleted_by_id')->nullable();
             $table->softDeletes();
-
-            $table->foreign('created_by_id')->references('id')->on('users')->onDelete('restrict');
-            $table->foreign('updated_by_id')->references('id')->on('users')->onDelete('restrict');
-            $table->foreign('deleted_by_id')->references('id')->on('users')->onDelete('restrict');
         });
 
         Schema::create('option_detail', function (Blueprint $table) {
@@ -51,9 +47,6 @@ class CreateOptionTable extends Migration
             $table->softDeletes();
 
             $table->foreign('option_id')->references('id')->on('option')->onDelete('restrict');
-            $table->foreign('created_by_id')->references('id')->on('users')->onDelete('restrict');
-            $table->foreign('updated_by_id')->references('id')->on('users')->onDelete('restrict');
-            $table->foreign('deleted_by_id')->references('id')->on('users')->onDelete('restrict');
         });
     }
 

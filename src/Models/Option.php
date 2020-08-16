@@ -13,7 +13,7 @@ class Option extends BaseModel {
 
 	use SoftCascadeTrait, SoftDeletes, BelongsToCreatedByTrait, BelongsToUpdatedByTrait, BelongsToDeletedByTrait, ScopeActiveTrait;
 
-	protected $table = 'option';
+	protected $table = 'options';
 
 	protected $processed = ['slug'];
 
@@ -27,7 +27,7 @@ class Option extends BaseModel {
 
 	const FILE_PATH = "/option/";
 
-	public function option_detail() {
+	public function option_details() {
 		return $this->hasMany(OptionDetail::class);
 	}
 

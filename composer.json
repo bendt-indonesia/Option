@@ -1,6 +1,6 @@
 {
   "name": "bendt/option",
-  "homepage": "https://bendt.co.id",
+  "homepage": "https://bendt.io",
   "license": "MIT",
   "description": "Bendt Option Module",
   "type": "laravel",
@@ -8,13 +8,19 @@
     {
       "name": "Bendt Indonesia",
       "email": "contact@bendt.io",
-      "homepage": "https://bendt.co.id"
+      "homepage": "https://bendt.io"
+    },
+    {
+      "name": "HUPERCLOUD",
+      "email": "huperseo@gmail.com",
+      "homepage": "https://www.hupercloud.com"
     }
   ],
   "require": {
     "php": ">=7.1.3",
-    "askedio/laravel-soft-cascade": "^6.0",
-    "laravel/framework" : "^6.0"
+    "askedio/laravel-soft-cascade": "^5.8|^6.0",
+    "laravel/framework": "^5.8|^6.0",
+    "yajra/laravel-datatables-oracle": "~9.0"
   },
   "autoload": {
     "psr-4": {
