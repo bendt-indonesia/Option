@@ -13,10 +13,17 @@
 
 namespace App\Traits;
 
-trait ScopeActiveTrait
+use Illuminate\Database\Eloquent\Builder;
+use App\Filters\QueryFilter;
+
+trait ScopeFilter
 {
-    public function scopeActive($query)
+    /**
+     * @param Builder $builder
+     * @param QueryFilter $filter
+     */
+    public function scopeFilter(Builder $builder, QueryFilter $filter)
     {
-        return $query->where('is_active', true);
+        $filter->apply($builder);
     }
 }

@@ -11,7 +11,9 @@
  Please don't modify this file because it may be overwritten when re-generated.
  */
 
-namespace Bendt\Option\Enums;
+namespace App\Enums;
+
+use App\Interfaces;
 
 abstract class EnumClass implements IEnum
 {

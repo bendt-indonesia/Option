@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\API\Traits;
+namespace Bendt\Option\Controllers\API\Traits;
 
 use Bendt\Option\Models\Option;
 use Bendt\Option\Models\OptionDetail as Model;

@@ -11,7 +11,7 @@
  Please don't modify this file because it may be overwritten when re-generated.
  */
 
-namespace Bendt\Option\Traits;
+namespace App\Traits;
 
 use Bendt\Option\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

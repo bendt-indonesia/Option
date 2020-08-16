@@ -4,10 +4,10 @@ namespace Bendt\Option\Models;
 
 use Askedio\SoftCascade\Traits\SoftCascadeTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Bendt\Option\Traits\BelongsToCreatedByTrait;
-use Bendt\Option\Traits\BelongsToUpdatedByTrait;
-use Bendt\Option\Traits\BelongsToDeletedByTrait;
-use Bendt\Option\Traits\ScopeActiveTrait;
+use App\Traits\BelongsToCreatedByTrait;
+use App\Traits\BelongsToUpdatedByTrait;
+use App\Traits\BelongsToDeletedByTrait;
+use App\Traits\ScopeActiveTrait;
 
 class Option extends BaseModel {
 

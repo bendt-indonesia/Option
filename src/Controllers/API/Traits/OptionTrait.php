@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\API\Traits;
+namespace Bendt\Option\Controllers\API\Traits;
 
-use App\Models\Option as Model;
+use Bendt\Option\Models\Option as Model;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,8 +36,6 @@ trait OptionTrait
     public function select(Request $request)
     {
         try {
-            //$this->authorize('view', Auth::user(), Model::class);
-
             $slug = $request->input('slug');
             if(!$slug) return $this->sendError($slug.' not Found!');
 

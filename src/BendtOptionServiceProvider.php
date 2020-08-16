@@ -38,7 +38,11 @@ class BendtOptionServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__.'/Export/IEnum.php' => app_path('Export/IEnum.php'),
+            __DIR__.'/Export/QueryFilter.php' => app_path('Filters/QueryFilter.php'),
+        ], 'filters');
+
+        $this->publishes([
+            __DIR__.'/Export/IEnum.php' => app_path('Interfaces/IEnum.php'),
             __DIR__.'/Export/EnumClass.php' => app_path('Enums/EnumClass.php'),
             __DIR__.'/Export/GenderType.php' => app_path('Enums/GenderType.php'),
         ], 'enum');
@@ -47,17 +51,24 @@ class BendtOptionServiceProvider extends ServiceProvider
             __DIR__.'/Export/Traits/BelongsToCreatedByTrait.php' => app_path('Traits/BelongsToCreatedByTrait.php'),
             __DIR__.'/Export/Traits/BelongsToDeletedByTrait.php' => app_path('Traits/BelongsToDeletedByTrait.php'),
             __DIR__.'/Export/Traits/BelongsToUpdatedByTrait.php' => app_path('Traits/BelongsToUpdatedByTrait.php'),
+            __DIR__.'/Export/Traits/RelationshipTrait.php' => app_path('Traits/RelationshipTrait.php'),
             __DIR__.'/Export/Traits/ScopeActiveTrait.php' => app_path('Traits/ScopeActiveTrait.php'),
             __DIR__.'/Export/Traits/ScopeAscTrait.php' => app_path('Traits/ScopeAscTrait.php'),
             __DIR__.'/Export/Traits/ScopeDescTrait.php' => app_path('Traits/ScopeDescTrait.php'),
-        ], 'enum');
+            __DIR__.'/Export/Traits/ScopeFilter.php' => app_path('Traits/ScopeFilter.php'),
+        ], 'traits');
 
         if(config('bendt-option.migration', true)) {
             $this->loadMigrationsFrom(__DIR__ . '/Database/migrations');
         }
 
-        //Load routes
+        //Load helper
         require __DIR__ . '/helper.php';
+
+        //Require Routes if not disabled
+        if(config('bendt-option.api_route', true)) {
+            require __DIR__ . '/routes/api.php';
+        }
     }
 
     /**

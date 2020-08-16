@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Http\Controllers\ApiController;
+use Bendt\Option\Controllers\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +15,7 @@ use Bendt\Option\DataLists\OptionDetailList as DataList;
 use Bendt\Option\Data\OptionDetail\RequestStoreOptionDetail;
 use Bendt\Option\Data\OptionDetail\RequestUpdateOptionDetail;
 use Bendt\Option\Data\OptionDetail\OptionDetailResource;
-use App\Http\Controllers\API\Traits\OptionDetailTrait;
+use Bendt\Option\Controllers\API\Traits\OptionDetailTrait;
 
 class OptionDetailController extends ApiController
 {
