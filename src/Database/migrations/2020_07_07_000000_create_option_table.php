@@ -57,7 +57,7 @@ class CreateOptionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('option_detail');
-        Schema::dropIfExists('option');
+        Schema::dropIfExists('option_details');
+        Schema::dropIfExists('options');
     }
 }
