@@ -13,7 +13,7 @@ class CreateOptionTable extends Migration
      */
     public function up()
     {
-        Schema::create('options', function (Blueprint $table) {
+        Schema::create('option', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 150);
             $table->string('slug', 150);
@@ -29,7 +29,7 @@ class CreateOptionTable extends Migration
             $table->softDeletes();
         });
 
-        Schema::create('option_details', function (Blueprint $table) {
+        Schema::create('option_detail', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('option_id');
 
@@ -46,7 +46,7 @@ class CreateOptionTable extends Migration
             $table->unsignedInteger('deleted_by_id')->nullable();
             $table->softDeletes();
 
-            $table->foreign('option_id')->references('id')->on('options')->onDelete('restrict');
+            $table->foreign('option_id')->references('id')->on('option')->onDelete('restrict');
         });
     }
 
@@ -57,7 +57,7 @@ class CreateOptionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('option_details');
-        Schema::dropIfExists('options');
+        Schema::dropIfExists('option_detail');
+        Schema::dropIfExists('option');
     }
 }

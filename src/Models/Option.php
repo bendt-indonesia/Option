@@ -17,9 +17,9 @@ class Option extends BaseModel {
 
 	protected $processed = ['slug'];
 
-	protected $softCascade = ['option_details'];
+	protected $softCascade = ['option_detail'];
 
-	protected $with = ['option_details'];
+	protected $with = ['option_detail'];
 
 	protected $guarded = ['slug'];
 
@@ -27,7 +27,7 @@ class Option extends BaseModel {
 
 	const FILE_PATH = "/option/";
 
-	public function option_details() {
+	public function option_detail() {
 		return $this->hasMany(OptionDetail::class);
 	}
 
