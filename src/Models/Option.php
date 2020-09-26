@@ -13,7 +13,7 @@ class Option extends BaseModel {
 
 	use SoftCascadeTrait, SoftDeletes, BelongsToCreatedByTrait, BelongsToUpdatedByTrait, BelongsToDeletedByTrait, ScopeActiveTrait;
 
-	protected $table = 'options';
+	protected $table = 'option';
 
 	protected $processed = ['slug'];
 
