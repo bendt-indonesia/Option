@@ -1,6 +1,6 @@
 <?php
 
-namespace Bendt\Option\Service;
+namespace Bendt\Option\Services;
 
 use Bendt\Option\Models\Option;
 use Bendt\Option\Models\OptionDetail;

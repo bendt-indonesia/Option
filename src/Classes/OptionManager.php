@@ -3,7 +3,7 @@
 namespace Bendt\Option\Classes;
 
 use Bendt\Option\Models\Option;
-use Bendt\Option\Service\OptionService;
+use Bendt\Option\Services\OptionService;
 use Illuminate\Support\Facades\DB;
 
 class OptionManager
