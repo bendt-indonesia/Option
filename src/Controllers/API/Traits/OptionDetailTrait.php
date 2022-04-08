@@ -13,7 +13,7 @@ trait OptionDetailTrait
      * Clear cache after store new option detail
      *
      * @param Model $model
-     * @throws \Exception
+     * @throws \Throwable
      * @return Boolean
      */
     public function clearCache($model)
@@ -27,7 +27,7 @@ trait OptionDetailTrait
      * Clear cache option detail (bulk) after option changes
      *
      * @param array $optionIds
-     * @throws \Exception
+     * @throws \Throwable
      * @return Boolean
      */
     public function clearCacheBulk($optionIds)
@@ -44,7 +44,7 @@ trait OptionDetailTrait
      * Check is option modifiable or not
      *
      * @param Model $model
-     * @throws \Exception
+     * @throws \Throwable
      * @return Boolean
      */
     public function checkModifiable($model)
@@ -60,7 +60,7 @@ trait OptionDetailTrait
      * Check is option modifiable (bulk) or not
      *
      * @param Object $models
-     * @throws \Exception
+     * @throws \Throwable
      * @return array
      */
     public function checkModifiableBulk($models)

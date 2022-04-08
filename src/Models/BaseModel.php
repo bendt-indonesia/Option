@@ -124,7 +124,7 @@ abstract class BaseModel extends Model
             $this->delete();
 
             DB::commit();
-        } catch (\Exception $ex) {
+        } catch (\Throwable $ex) {
             return false;
         }
 

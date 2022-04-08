@@ -22,7 +22,7 @@ trait OptionTrait
         try {
             $data = option($key);
             return $this->sendResponse($data->option_detail);
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             return $this->sendException($e);
         }
     }
@@ -43,7 +43,7 @@ trait OptionTrait
 
             return datatables($models->option_detail)
                 ->make(true);
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             return $this->sendException($e);
         }
     }
@@ -52,7 +52,7 @@ trait OptionTrait
      * Check is option modifiable or not
      *
      * @param Model $model
-     * @throws \Exception
+     * @throws \Throwable
      * @return Boolean
      */
     public function checkModifiable($model)
@@ -68,7 +68,7 @@ trait OptionTrait
      * Check is option delete able or not
      *
      * @param Model $model
-     * @throws \Exception
+     * @throws \Throwable
      * @return Boolean
      */
     public function checkDeleteAble($model)
@@ -84,7 +84,7 @@ trait OptionTrait
      * Check is option delete able (bulk) or not
      *
      * @param Object $models
-     * @throws \Exception
+     * @throws \Throwable
      * @return Boolean
      */
     public function checkDeleteAbleBulk($models)

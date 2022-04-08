@@ -1,8 +1,8 @@
 <?php
 
-namespace Bendt\Option\Exceptions;
+namespace Bendt\Option\Throwables;
 
-class NoConfigFoundException extends \Exception
+class NoConfigFoundException extends \Throwable
 {
     /**
      * All of the guards that were checked.

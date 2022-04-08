@@ -25,7 +25,7 @@ class OptionManager
             $data = collect($option->option_detail)->firstWhere($key, $value)->toArray();
 
             return $data;
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             abt('Helper > foption', $e->getMessage());
         }
     }

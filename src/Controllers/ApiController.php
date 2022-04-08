@@ -15,7 +15,7 @@ namespace Bendt\Option\Controllers;
 
 use App\Http\Controllers\Controller as AppController;
 use Bendt\Option\Models\ErrorLog;
-use Bendt\Option\Exceptions\MyValidationException;
+use Bendt\Option\Throwables\MyValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
@@ -84,10 +84,10 @@ class ApiController extends AppController
      * Return error response.
      *
      *
-     * @param  \Exception $exception
+     * @param  \Throwable $exception
      * @return \Illuminate\Http\Response
      */
-    public function sendException(\Exception $exception)
+    public function sendException(\Throwable $exception)
     {
         if ($exception instanceof MyValidationException) {
             $errors = json_decode($exception->getMessage());

@@ -91,7 +91,7 @@ if (!function_exists('foption')) {
             $data = collect($option->option_detail)->firstWhere($key, $value)->toArray();
 
             return $data;
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             abt('Helper > foption',$e->getMessage());
         }
     }
@@ -111,7 +111,7 @@ if (!function_exists('abt')) {
     {
         //$errorMsg = "[ ERR: ".$error_code." ] ".$message;
         $errorMsg = $message . ' ( ' . $error_code . ' )';
-        throw new \Exception($errorMsg, $http_code);
+        throw new \Throwable($errorMsg, $http_code);
     }
 }
 

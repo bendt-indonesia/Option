@@ -1,8 +1,8 @@
 <?php
 
-namespace Bendt\Option\Exceptions;
+namespace Bendt\Option\Throwables;
 
-class MyValidationException extends \Exception
+class MyValidationException extends \Throwable
 {
 
     /**

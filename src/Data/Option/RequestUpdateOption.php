@@ -4,7 +4,7 @@ namespace Bendt\Option\Data\Option;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\Throwables\HttpResponseException;
 
 class RequestUpdateOption extends FormRequest
 {

@@ -58,7 +58,7 @@ class OptionController extends ApiController
 					filterDataTables($request, $filters, $query);
 				})
                 ->make(true);
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             return $this->sendException($e);
         }
     }
@@ -87,7 +87,7 @@ class OptionController extends ApiController
             return $this->sendResponse((new OptionResource($model))->additional([
 
             ]), null, 201);
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             DB::rollBack();
             return $this->sendException($e);
         }
@@ -112,7 +112,7 @@ class OptionController extends ApiController
             DB::commit();
 
             return $this->sendResponse($resource, null, 200);
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             DB::rollBack();
             return $this->sendException($e);
         }
@@ -144,7 +144,7 @@ class OptionController extends ApiController
             return $this->sendResponse((new OptionResource($model))->additional([
 
             ]));
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             DB::rollBack();
             return $this->sendException($e);
         }
@@ -173,7 +173,7 @@ class OptionController extends ApiController
             DB::commit();
 
             return $this->sendResponse([], null, 204);
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             DB::rollBack();
             return $this->sendException($e);
         }
@@ -209,7 +209,7 @@ class OptionController extends ApiController
             DB::commit();
 
             return $this->sendResponse([], null, 204);
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             DB::rollBack();
             return $this->sendException($e);
         }
